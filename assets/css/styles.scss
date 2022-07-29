@@ -1,0 +1,350 @@
+$mobile-mode-width: 30em;
+$border-radius: 2rem;
+$border-radius-bnt: 10px;
+$bg-color: #003366;
+$hover-link-color: #2a5493;
+// Glassmorphism Theme (https://ux.pub/glassmorphism/)
+$blur-bg: 7px;
+$primary-color-alpha: 0.6;
+$secondary-color-alpha: 0.3;
+
+.box-bottom {
+    font-family: "JetBrains Mono";
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    #mainbox-btn {
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+#bottombox-btn {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    align-self: flex-start;
+}
+
+.spoiler-dnt {
+    display: none;
+}
+
+.spoiler-dnt {
+    p {
+        font-size: 0.7rem;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    background: $bg-color;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a:active,
+a:hover,
+a:focus {
+    outline-width: 0;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+    // padding-top: 1rem;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    text-align: left;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container {
+    width: 36rem;
+    min-width: $mobile-mode-width;
+    max-width: 555px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: $border-radius;
+    transition: 0.5s;
+    backdrop-filter: blur($blur-bg);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+    // color: rgb(16, 16, 16);
+    // background-color: rgba(248, 248, 248, $primary-color-alpha);
+    // border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: $mobile-mode-width) {
+    .container {
+        width: 100%;
+        min-width: auto;
+        height: 100%;
+        padding: 0px 24px;
+        margin: 0;
+        border-radius: 0px;
+        box-shadow: none;
+        border: 0;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 23em) {
+    .container {
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (min-width: $mobile-mode-width + 0.1em) and (max-width: 48em) {
+    .container {
+        width: 80%;
+    }
+}
+
+.wrapper {
+    width: 80%;
+    min-width: $mobile-mode-width;
+    max-width: 850px;
+    padding: 2em;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: $border-radius;
+    transition: 0.5s;
+    backdrop-filter: blur($blur-bg);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+    // color: rgb(16, 16, 16);
+    // background-color: rgba(248, 248, 248, $primary-color-alpha);
+    // border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: $mobile-mode-width) {
+    .wrapper {
+        width: 100%;
+        min-width: auto;
+        // height: 100%;
+        padding: 2em 0.5em;
+        margin: 0;
+        border-radius: 0px;
+        box-shadow: none;
+        border: 0;
+    }
+}
+
+.content {
+    margin-bottom: 0.625rem;
+    padding: 1rem 0.5rem 0;
+    // text-align: center;
+}
+
+@media screen and (max-width: $mobile-mode-width) {
+    .content {
+        padding: 1rem 0;
+    }
+}
+
+.title {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    text-align: center;
+    margin: 5px 0;
+    p {
+        font-weight: normal;
+    }
+    a {
+        text-decoration: none;
+    }
+    .user-pic {
+        height: 150px;
+        pointer-events: none;
+        margin-bottom: 1rem;
+        justify-self: center;
+        background-image: url("../img/logo.png");
+        background-size: cover;
+    }
+}
+
+.icons {
+    font-size: 30px;
+    padding: 0 4px;
+}
+
+a {
+    transition: color 0.4s;
+    color: black;
+    &:hover,
+    &:focus {
+        color: $hover-link-color;
+    }
+}
+
+.social-btn,
+.btn {
+    display: inline-block;
+    border-radius: $border-radius-bnt;
+    text-decoration: none;
+    backdrop-filter: blur($blur-bg + 5px);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+    // color: rgb(16, 16, 16);
+    // background-color: rgba(248, 248, 248, $secondary-color-alpha);
+    // border: 2px solid rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 1px 0 rgba(40, 40, 40, 0.5);
+        color: $hover-link-color;
+    }
+}
+
+.social-btn {
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 18px;
+    font-size: 1rem;
+    margin: 10px;
+    min-width: 120px;
+    // width: 100px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    opacity: 0.8;
+    margin: 1em 0;
+    background: linear-gradient(to left, #f0f0f0, #8c8b8b, #f0f0f0);
+    &.hr-line {
+        opacity: 0.15;
+    }
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 0;
+
+    &.img-circle {
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+
+    &.img-qrcode {
+        height: 150px;
+    }
+}
+
+/* Day mode/theme styles */
+@media (prefers-color-scheme: light) {
+    .container,
+    .wrapper {
+        color: rgb(16, 16, 16);
+        background-color: rgba(248, 248, 248, $primary-color-alpha);
+        border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .social-btn,
+    .btn {
+        color: rgb(16, 16, 16);
+        background-color: rgba(248, 248, 248, $secondary-color-alpha);
+        border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #bg-img-container {
+        background-image: url("../img/bg-light.jpg");
+    }
+}
+
+/* Night mode/theme styles */
+@media (prefers-color-scheme: dark) {
+    .container,
+    .wrapper {
+        color: rgb(248, 248, 248);
+        background-color: rgba(16, 16, 16, $primary-color-alpha);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-btn,
+    .btn {
+        color: rgb(248, 248, 248);
+        background-color: rgba(16, 16, 16, $secondary-color-alpha);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #bg-img-container {
+        background-image: url("../img/bg-dark.jpg");
+    }
+}
+
+#bg-img-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    // background-image: url("../img/bg-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/*! particles.js - https://github.com/VincentGarreau/particles.js
+ *  License - https://github.com/VincentGarreau/particles.js/blob/master/LICENSE.md (The MIT License) */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+// Imports
+@import "fonts";
+@import "anim";
+// Icons for buttons
+@import "fa";

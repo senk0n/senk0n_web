@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>donation</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- JS -->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="bg-img-container"></div>
+    <!-- Header -->
+    <header class="header flex">
+        <!-- Main -->
+        <div class="container animated fadeIn" id="main">
+            <!-- Content -->
+            <div class="content">
+                <div class="title">
+                    <h1>donation for senk0n</h1>
+                    <a class="social-btn zoombtn" href="../"> <i class="fa fa-chevron-left"></i> </a>
+                    <!-- Typed -->
+                    <p><span id="typed"></span></p>
+                </div>
+                <hr class="hr-line">
+                <div class="title">
+                    <a class="btn" id="mono" href="https://send.monobank.ua/7xV6azBzRu" target="_blank"
+                        title="min 100 UAH for non-Mono card">Monobank</a>
+                    <a class="btn" id="pb" href="https://liqpay.ua/checkout/senk0n" target="_blank"
+                        title="LiqPay">PrivatBank</a>
+                    <a class="btn" id="rl" href="https://revolut.me/shandalko" target="_blank">Revolut</a>
+                    <a class="btn" id="pp" href="https://paypal.me/senk0n" target="_blank">PayPal</a>
+                    <a class="btn" href="https://yoomoney.ru/to/410018359833519" target="_blank"
+                        title="Yandex">Yoomoney</a>
+                    <!-- <a class="btn" id="qiwi" href="https://qiwi.com/n/senk0n" target="_blank">QIWI</a>
+					<a class="btn" href="https://donatepay.ru/don/senk0n" target="_blank" title="withdraw from 1000 RUB">DonatePay</a> -->
+                    <a class="btn" id="btc-btn">Bitcoin</a>
+                    <a class="btn" id="eth-btn">Ether</a>
+                    <a class="btn" id="ref-btn">Referral</a>
+                </div>
+                <!-- Bitcoin -->
+                <div class="spoiler-dnt" id="btc-box">
+                    <hr class="hr-line">
+                    <div class="title">
+                        <a class="btn" href="https://paynym.is/+morningcell4c7" target="_blank">PayNym / BIP47</a>
+                        <a class="btn" href="bitcoin://bc1qh8hwm34wez6mzpvz5mw9uv4hs2jknrpepuk0ry">Send BTC</a>
+                        <p>bc1qh8hwm34wez6mzpvz5mw9uv4hs2jknrpepuk0ry</p>
+                        <img src="../donate/qr_btc.jpg" class="img-qrcode">
+                    </div>
+                </div>
+                <!-- Ether -->
+                <div class="spoiler-dnt" id="eth-box">
+                    <hr class="hr-line">
+                    <div class="title">
+                        <a class="btn" href="ethereum://0x578784Dc05926aBC7d21fCDA0E14Eb6D8b219618">Send ETH</a>
+                        <p>0x578784Dc05926aBC7d21fCDA0E14Eb6D8b219618</p>
+                        <img src="../donate/qr_eth.jpg" class="img-qrcode">
+                    </div>
+                </div>
+                <!-- Referral -->
+                <div class="spoiler-dnt" id="ref-box">
+                    <hr class="hr-line">
+                    <div class="title">
+                        <a class="btn" href="https://senk.one/mono" target="_blank"
+                            title="Лучший Украинский Банк <3">Monobank</a>
+                        <a class="btn" href="https://revolut.com/referral/serhiiipld" target="_blank">Revolut</a>
+                        <a class="btn" href="https://wise.com/invite/u/05f8a18" target="_blank">Wise</a>
+                        <!-- <a class="btn" href="https://db.tt/jUDELNobqK" target="_blank" title="sign up give me 0.5GB">Dropbox</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            strings: [
+                '^300Я буду крайне благодарен за любую сумму^150 отправленную одним из сервисов ниже.',
+                'Или, ^150можно воспользоваться интересующей реферальной ссылкой в конце.',
+                'Огромное тебе спасибо^300 ♡'
+            ], typeSpeed: 25, backSpeed: 10, backDelay: 1000, loop: false, shuffle: false, cursorChar: '|'
+        });
+    </script>
+</body>
+
+</html>
